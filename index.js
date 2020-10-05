@@ -166,8 +166,8 @@ Using the feet function below do the following:
   3. Return number of centimeters
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(input){
+    const cm;
   }
  
 
@@ -182,9 +182,18 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(num){
+
+  if (Number.isInteger(num) && num > 0) {
+
+    for (let i = num; num > 0; num--) {
+      const song =`${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${num-1} bottles of soda on the wall!`;
+      console.log(song);
+    } 
+  } else {
+    console.log("Please enter a whole number to start the song!");
   }
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -202,13 +211,19 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(input){
+    if (input >= 90) {
+      return "A"
+    } else if (input <= 89 && input >= 80) {
+      return "B"
+    } else if (input <=79 && input >= 70) {
+      return "C"
+    } else if (input <= 69 && input >=60) {
+      return "D"
+    } else {
+      return "F"
+    };
   }
-  
-  
-  
-  
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
