@@ -152,9 +152,14 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(num){
+  const km = 0.6213;
+  if (Number.isInteger(num) && num > 0) {
+    return `${num} km equals ${(num * km).toFixed(2)} kilometers.`;
+  } else {
+    return "Please enter a whole number";
+  };
+}
 
 
 
@@ -166,9 +171,14 @@ Using the feet function below do the following:
   3. Return number of centimeters
 */
 
-function feet(input){
-    const cm;
-  }
+function feet(num){
+  const cm = 30.48;
+  if (Number.isInteger(num) && num > 0) {
+    return `${num} feet equals ${num * cm} centimeters.`;
+  } else {
+    return "Please enter a whole number";
+  };
+}
  
 
 
@@ -191,8 +201,8 @@ function annoyingSong(num){
       console.log(song);
     } 
   } else {
-    console.log("Please enter a whole number to start the song!");
-  }
+    return "Please enter a whole number to start the song!";
+  };
 }
 
 
