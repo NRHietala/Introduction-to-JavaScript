@@ -38,7 +38,7 @@ let b = 4;
 
 if (a <= b) {
   a += b;
-};
+}
 
 
 /*
@@ -53,7 +53,7 @@ Do the following:
 */
 let myString = "1999";
 
-myNum = Number(myString);
+let myNum = Number(myString);
 
 /*
 Task 1d - Multiply
@@ -81,11 +81,13 @@ Do the following:
 */
 
 function dogYears(num) {
-  if (Number.isInteger(num) && num > 0) {
-    return `${num} Human years equals ${num * 7} dog years.`;
-  } else {
-     return "Please enter a whole number";
-  };
+  // if (Number.isInteger(num) && num > 0) {
+  //   return `${num} Human years equals ${num * 7} dog years.`;
+  // } else {
+  //    return "Please enter a whole number";
+  // }
+
+  return num *7;
 }
 
 
@@ -119,26 +121,26 @@ Use the hungryDog function and feeding requirements below to do the following:
 function hungryDog(weight, age) {
     if (Number.isInteger(age)) {
       if (weight > 0 && weight <= 5) {
-        return `Feed pet ${weight * .05}`;
+        return weight * .05;
       } else if (weight >= 6 && weight <= 10) {
-        return `Feed pet ${weight * .04}`;
+        return weight * .04;
       } else if (weight >= 11 && weight <= 15) {
-        return `Feed pet ${weight * .03}`;
+        return weight * .03;
       } else {
-        return `Feed pet ${weight * .02}`;
-      };
+        return weight * .02;
+      }
 
     } else if (Number(age) < 1) {
       if (age/12 <= .3333) {
-        return `Feed pet ${weight * .10}`;
+        return weight * .10;
       } else if (age/12 >= .3334 && age/12 <= .583) {
-        return `Feed pet ${weight * .05}`;
+        return weight * .05;
       } else {
-        return `Feed pet ${weight * .04}`;
-      };
+        return weight * .04;
+      }
     } else {
       return "Please enter pet's age.";
-    };
+    }
 }
 
 
@@ -183,13 +185,14 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(num){
-  const km = 0.6213;
-  if (Number.isInteger(num) && num > 0) {
-    return `${num} km equals ${(num * km).toFixed(2)} kilometers.`;
-  } else {
-    return "Please enter a whole number";
-  };
+function miles(km){
+  return km * 0.621371;
+  // const km = 0.6213;
+  // if (Number.isInteger(num) && num > 0) {
+  //   return `${num} km equals ${(num * km).toFixed(2)} kilometers.`;
+  // } else {
+  //   return "Please enter a whole number";
+  // }
 }
 
 
@@ -202,13 +205,14 @@ Using the feet function below do the following:
   3. Return number of centimeters
 */
 
-function feet(num){
-  const cm = 30.48;
-  if (Number.isInteger(num) && num > 0) {
-    return `${num} feet equals ${num * cm} centimeters.`;
-  } else {
-    return "Please enter a whole number";
-  };
+function feet(cm){
+  // const cm = 30.48;
+  // if (Number.isInteger(num) && num > 0) {
+  //   return `${num} feet equals ${num / cm} centimeters.`;
+  // } else {
+  //   return "Please enter a whole number";
+  // }
+  return cm / 30.48;
 }
  
 
@@ -233,7 +237,7 @@ function annoyingSong(num){
     } 
   } else {
     return "Please enter a whole number to start the song!";
-  };
+  }
 }
 
 
@@ -254,16 +258,16 @@ Using the grade function below do the following:
   
 function grade(input){
     if (input >= 90) {
-      return "A"
+      return "you got a A"
     } else if (input <= 89 && input >= 80) {
-      return "B"
+      return "you got a B"
     } else if (input <=79 && input >= 70) {
-      return "C"
+      return "you got a C"
     } else if (input <= 69 && input >=60) {
-      return "D"
+      return "you got a D"
     } else {
-      return "F"
-    };
+      return "you got a F"
+    }
   }
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
