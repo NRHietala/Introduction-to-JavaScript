@@ -65,8 +65,7 @@ Do the following:
 */
 
 function multiply(a, b){
-    let answer = a * b;
-    return answer;
+    return a * b;
   }
 
 
