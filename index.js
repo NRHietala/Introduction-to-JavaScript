@@ -17,14 +17,8 @@ Do the following:
 
    HINT: no function required
 */
- const votingAge = 18;
- let age = 20;
 
- if (age >= votingAge) {
-   console.log("You can vote!");
- } else {
-   console.log("You're too young!");
- }
+ 
 
 /*
 Task 1b - Values
@@ -120,8 +114,12 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(weight, age){
-    
+function hungryDog(weight, age) {
+    if (Number.isInteger(age)) {
+
+    } else {
+
+    }
   }
 
 
@@ -141,12 +139,18 @@ Use the game function below to do the following:
 */
 
 function game(input){
-    if (typeof(input)==="string") {
-      
-    } else {
-      return "Please Choose: Rock, Paper, or Scissors.";
-    }
+
+
 }
+//   let min = 1;
+//       max = 9;
+//     if (typeof(input.toLowerCase())==="string" && input.includes("rock")) {
+//       let compRoll = Math.floor(Math.random() * (max-min) + min);
+//       console.log(comproll);
+//     } else {
+//       return "Please Choose: Rock, Paper, or Scissors.";
+//     }
+// }
   
   
 
