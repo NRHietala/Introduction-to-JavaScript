@@ -18,11 +18,13 @@ Do the following:
    HINT: no function required
 */
  const votingAge = 18;
+ let age = 20;
 
- if (votingAge >= 18) {
-   return true;
+ if (age >= votingAge) {
+   console.log("You can vote!");
+ } else {
+   console.log("You're too young!");
  }
-
 
 /*
 Task 1b - Values
@@ -82,10 +84,13 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(humanYears){
-  return humanYears * 7;
+function dogYears(num) {
+  if (Number.isInteger(num) && num > 0) {
+    return `${num} Human years equals ${num * 7} dog years.`;
+  } else {
+     return "Please enter a whole number";
+  };
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -135,8 +140,12 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/){
-    /*add your code here*/
+function game(input){
+    if (typeof(input)==="string") {
+      
+    } else {
+      return "Please Choose: Rock, Paper, or Scissors.";
+    }
 }
   
   
