@@ -17,7 +17,9 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 30;
 
+votingAge >= 18 ? true : false ;
  
 
 /*
@@ -35,9 +37,9 @@ let a = 2;
 let b = 4;
 
 if (a <= b) {
-  let num = a += b;
-}
-console.log(num);
+  return a += b;
+};
+
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -50,6 +52,7 @@ Do the following:
    HINT: look up the Number method
 */
 let myString = "1999";
+
 myNum = Number(myString);
 
 /*
