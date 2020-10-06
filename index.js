@@ -37,7 +37,7 @@ let a = 2;
 let b = 4;
 
 if (a <= b) {
-  return a += b;
+  a += b;
 };
 
 
@@ -118,10 +118,12 @@ Use the hungryDog function and feeding requirements below to do the following:
 */  
 
 function hungryDog(weight, age) {
-    if (Number.isInteger(age)) {
+    if (Number.isInteger(age) >= 1 && weight <= 5) {
+    
+    } else if (Number(age) / 12) {
 
     } else {
-
+      return "Please enter pet's age."
     }
   }
 
