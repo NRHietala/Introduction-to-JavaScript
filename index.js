@@ -144,6 +144,8 @@ function hungryDog(weight, age) {
     }
 }
 
+hungryDog(15,1)
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -159,10 +161,32 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(input){
+function game(userCast){
+  let userSign = String(userCast),
+      min = 1,
+      max = 4,
+      compSign;
 
+  let compCast = Math.floor(Math.random() * (max-min) + min);
+
+    if(compCast === 1) {
+      compSign = 'rock';
+    } else if (compCast === 2) {
+      compSign = 'paper';
+    } else {
+      compSign = 'scissors';
+    }
+    console.log("computer sign"+ compSign)
+
+  if (String(userSign) === String(compSign)) {
+    return "tie";
+  } else if (userSign === 'paper' && compSign === 'scissors') {
+    return "you lose";
+  }
 
 }
+
+
 //   let min = 1;
 //       max = 9;
 //     if (typeof(input.toLowerCase())==="string" && input.includes("rock")) {
