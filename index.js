@@ -19,7 +19,7 @@ Do the following:
 */
 const votingAge = 30;
 
-votingAge >= 18 ? true : false ;
+votingAge >= 18 ? true : false;
  
 
 /*
@@ -53,7 +53,7 @@ Do the following:
 */
 let myString = "1999";
 
-let myNum = Number(myString);
+myString = Number(myString);
 
 /*
 Task 1d - Multiply
@@ -81,6 +81,7 @@ Do the following:
 */
 
 function dogYears(num) {
+
   // if (Number.isInteger(num) && num > 0) {
   //   return `${num} Human years equals ${num * 7} dog years.`;
   // } else {
@@ -119,6 +120,7 @@ Use the hungryDog function and feeding requirements below to do the following:
 */  
 
 function hungryDog(weight, age) {
+
     if (Number.isInteger(age)) {
       if (weight > 0 && weight <= 5) {
         return weight * .05;
@@ -129,7 +131,6 @@ function hungryDog(weight, age) {
       } else {
         return weight * .02;
       }
-
     } else if (Number(age) < 1) {
       if (age/12 <= .3333) {
         return weight * .10;
@@ -187,6 +188,7 @@ Using the miles function below do the following:
 
 function miles(km){
   return km * 0.621371;
+
   // const km = 0.6213;
   // if (Number.isInteger(num) && num > 0) {
   //   return `${num} km equals ${(num * km).toFixed(2)} kilometers.`;
@@ -206,6 +208,7 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
+
   // const cm = 30.48;
   // if (Number.isInteger(num) && num > 0) {
   //   return `${num} feet equals ${num / cm} centimeters.`;
@@ -229,14 +232,9 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(num){
 
-  if (Number.isInteger(num) && num > 0) {
-
-    for (let i = num; num > 0; num--) {
-      const song =`${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${num-1} bottles of soda on the wall!`;
-      console.log(song);
-    } 
-  } else {
-    return "Please enter a whole number to start the song!";
+  while (num > 0) {
+    return `${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${num-1} bottles of soda on the wall`;
+    num--;
   }
 }
 
