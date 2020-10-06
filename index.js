@@ -118,15 +118,29 @@ Use the hungryDog function and feeding requirements below to do the following:
 */  
 
 function hungryDog(weight, age) {
-    if (Number.isInteger(age) >= 1 && weight <= 5) {
-    
-    } else if (Number(age) / 12) {
+    if (Number.isInteger(age)) {
+      if (weight > 0 && weight <= 5) {
+        return `Feed pet ${weight * .05}`;
+      } else if (weight >= 6 && weight <= 10) {
+        return `Feed pet ${weight * .04}`;
+      } else if (weight >= 11 && weight <= 15) {
+        return `Feed pet ${weight * .03}`;
+      } else {
+        return `Feed pet ${weight * .02}`;
+      };
 
+    } else if (Number(age) < 1) {
+      if (age/12 <= .3333) {
+        return `Feed pet ${weight * .10}`;
+      } else if (age/12 >= .3334 && age/12 <= .583) {
+        return `Feed pet ${weight * .05}`;
+      } else {
+        return `Feed pet ${weight * .04}`;
+      };
     } else {
-      return "Please enter pet's age."
-    }
-  }
-
+      return "Please enter pet's age.";
+    };
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
